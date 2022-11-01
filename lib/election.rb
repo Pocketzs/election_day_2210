@@ -18,10 +18,8 @@ class Election
   end
 
   def vote_counts
-    vote_counts = Hash.new
-    candidates.each do |candidate|
-      vote_counts[candidate.name] = candidate.votes
+    vote_counts = candidates.each_with_object({}) do |candidate, hash|
+      hash[candidate.name] = candidate.votes 
     end
-    vote_counts
   end
 end
