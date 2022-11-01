@@ -38,7 +38,8 @@ describe Election do
   end
 
   describe 'candidates' do
-    election = Election.new('2022')
+    it 'returns an array of all candidates' do
+      election = Election.new('2022')
       race1 = Race.new("Virginia District 4 Representative")
       race2 = Race.new("Texas Governor")
 
@@ -52,5 +53,6 @@ describe Election do
       candidate5 = race2.register_candidate!({name: "Ida I", party: :independent})
 
       expect(election.candidates).to eq([candidate1, candidate2, candidate3, candidate4, candidate5])
+    end
   end
 end
