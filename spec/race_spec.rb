@@ -15,5 +15,11 @@ describe Race do
 
       expect(race.office).to eq "Texas Governor"
     end
+
+    it 'starts with an empty array of candidates' do
+      race = Race.new("Texas Governor")
+
+      expect(race.candidates).to eq []
+    end
   end
 end
