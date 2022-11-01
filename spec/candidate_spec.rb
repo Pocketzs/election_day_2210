@@ -19,5 +19,11 @@ describe Candidate do
       expect(charles.name).to eq "Charles F"
       expect(charles.party).to eq :republican
     end
+
+    it 'starts with 0 votes' do
+      diana = Candidate.new({name: "Diana D", party: :democrat})
+
+      expect(diana.votes).to eq 0
+    end
   end
 end
