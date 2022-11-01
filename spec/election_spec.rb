@@ -76,13 +76,9 @@ describe Election do
       candidate5 = race2.register_candidate!({name: "Ida I", party: :independent})
 
       4.times {candidate1.vote_for!}
-
       1.times {candidate2.vote_for!}
-
       10.times {candidate3.vote_for!}
-
       6.times {candidate4.vote_for!}
-
       6.times {candidate5.vote_for!}
 
       expect(election.vote_counts).to eq({"Diana D"=>4, 
