@@ -8,5 +8,16 @@ describe Candidate do
 
       expect(diana).to be_a Candidate
     end
+
+    it 'has attributes' do
+      diana = Candidate.new({name: "Diana D", party: :democrat})
+      charles = Candidate.new({name: "Charles F", party: :republican})
+      
+      expect(diana.name).to eq "Diana D"
+      expect(diana.party).to eq :democrat
+
+      expect(charles.name).to eq "Charles F"
+      expect(charles.party).to eq :republican
+    end
   end
 end
